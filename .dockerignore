@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+dist
+.git
+.gitignore
+.devmemory
+.agents
+.claude
+.gemini
+.DS_Store
+*.log

@@ -1,0 +1,30 @@
+services:
+  promptguard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: promptguard-gateway
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:9119:9119"
+      - "127.0.0.1:9120:9120"
+    environment:
+      - NODE_ENV=production
+      - PORT=9119
+      - HOST=0.0.0.0
+      - PROXY_PORT=9120
+      - PROXY_HOST=0.0.0.0
+      - PROMPTGUARD_DOMAINS=${PROMPTGUARD_DOMAINS:-}
+      - PROMPTGUARD_LOCAL_LLM_PORTS=${PROMPTGUARD_LOCAL_LLM_PORTS:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    volumes:
+      - promptguard-ca:/home/node/.promptguard
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:9119/health"]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+volumes:
+  promptguard-ca:

@@ -1,0 +1,12 @@
+{
+  "name": "promptguard-desktop-daemon",
+  "version": "2.4.0",
+  "private": true,
+  "type": "module",
+  "description": "PromptGuard Local PC Desktop Proxy & Zero-Extension Web Gateway",
+  "scripts": {
+    "start": "node server.mjs",
+    "setup:mac": "bash installer/install-macos.sh",
+    "setup:linux": "bash installer/install-linux.sh"
+  }
+}
