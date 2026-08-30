@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 60" fill="none">
+  <defs>
+    <linearGradient id="bgFt" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="lineGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="60" fill="url(#bgFt)"/>
+  <rect x="100" y="0" width="700" height="1" fill="url(#lineGlow)" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="450" y="30" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#64748b">
+    Built with ❤️ by Gökhan Türkmen for Enterprise AI Security
+  </text>
+  <g transform="translate(450, 50)">
+    <circle cx="-30" cy="0" r="2" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="2" fill="#06b6d4">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+    </circle>
+    <circle cx="30" cy="0" r="2" fill="#f59e0b">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" begin="1.4s"/>
+    </circle>
+  </g>
+</svg>

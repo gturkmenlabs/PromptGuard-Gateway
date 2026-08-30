@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" fill="none">
+  <defs>
+    <linearGradient id="bgF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <pattern id="gridF" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.3" opacity="0.3"/>
+    </pattern>
+    <filter id="glowF" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="320" fill="url(#bgF)"/>
+  <rect width="900" height="320" fill="url(#gridF)"/>
+
+  <text x="450" y="30" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#64748b" font-weight="600" letter-spacing="3">KEY FEATURES</text>
+
+  <!-- Feature 1: Zero-Knowledge Vault -->
+  <g transform="translate(30, 55)">
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1" opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Lock icon -->
+    <g transform="translate(25, 30)">
+      <rect x="-8" y="0" width="16" height="13" rx="2" fill="none" stroke="#10b981" stroke-width="1.5"/>
+      <path d="M -4 0 L -4 -6 Q -4 -12 0 -12 Q 4 -12 4 -6 L 4 0" stroke="#10b981" stroke-width="1.5" fill="none"/>
+      <circle cx="0" cy="6" r="2" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <text x="50" y="32" font-family="'Segoe UI', sans-serif" font-size="13" fill="#f1f5f9" font-weight="700">Zero-Knowledge Vault</text>
+    <text x="50" y="48" font-family="'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">Context-aware synthetic replacement</text>
+    <!-- Mini demo -->
+    <text x="15" y="72" font-family="'SF Mono', monospace" font-size="9" fill="#ef4444">sk-live-4eC39...</text>
+    <text x="100" y="72" font-family="'SF Mono', monospace" font-size="9" fill="#475569">→</text>
+    <text x="115" y="72" font-family="'SF Mono', monospace" font-size="9" fill="#10b981">[SYN_TOKEN_4912]</text>
+    <text x="15" y="88" font-family="'SF Mono', monospace" font-size="9" fill="#ef4444">john@acme.co</text>
+    <text x="100" y="88" font-family="'SF Mono', monospace" font-size="9" fill="#475569">→</text>
+    <text x="115" y="88" font-family="'SF Mono', monospace" font-size="9" fill="#10b981">[SYN_EMAIL_001]</text>
+    <!-- Animated border highlight -->
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="8 12" opacity="0.3">
+      <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Feature 2: Live Proxy Simulator -->
+  <g transform="translate(320, 55)">
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="#0f172a" stroke="#06b6d4" stroke-width="1" opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+    <!-- Monitor icon -->
+    <g transform="translate(25, 30)">
+      <rect x="-10" y="-8" width="20" height="14" rx="2" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+      <line x1="0" y1="6" x2="0" y2="10" stroke="#06b6d4" stroke-width="1.5"/>
+      <line x1="-6" y1="10" x2="6" y2="10" stroke="#06b6d4" stroke-width="1.5"/>
+      <!-- Activity lines -->
+      <line x1="-6" y1="-2" x2="-3" y2="-2" stroke="#06b6d4" stroke-width="1">
+        <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+      </line>
+      <line x1="-1" y1="-2" x2="4" y2="-2" stroke="#06b6d4" stroke-width="1">
+        <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.3s"/>
+      </line>
+      <line x1="-6" y1="2" x2="0" y2="2" stroke="#06b6d4" stroke-width="1">
+        <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.6s"/>
+      </line>
+    </g>
+    <text x="50" y="32" font-family="'Segoe UI', sans-serif" font-size="13" fill="#f1f5f9" font-weight="700">Live Proxy Simulator</text>
+    <text x="50" y="48" font-family="'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">Real-time 4-stage pipeline demo</text>
+    <!-- Activity bars -->
+    <rect x="15" y="65" width="0" height="6" rx="3" fill="#06b6d4" opacity="0.6">
+      <animate attributeName="width" values="0;180;0" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="15" y="78" width="0" height="6" rx="3" fill="#0ea5e9" opacity="0.5">
+      <animate attributeName="width" values="0;140;0" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+    <rect x="15" y="91" width="0" height="6" rx="3" fill="#22d3ee" opacity="0.4">
+      <animate attributeName="width" values="0;200;0" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </rect>
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="8 12" opacity="0.3">
+      <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+  </g>
+
+  <!-- Feature 3: CISO Dashboard -->
+  <g transform="translate(610, 55)">
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="#0f172a" stroke="#8b5cf6" stroke-width="1" opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </rect>
+    <!-- Chart icon -->
+    <g transform="translate(25, 30)">
+      <rect x="-8" y="2" width="5" height="8" rx="1" fill="#8b5cf6" opacity="0.8">
+        <animate attributeName="height" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="2;-2;2" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="-1" y="-4" width="5" height="14" rx="1" fill="#a78bfa" opacity="0.8">
+        <animate attributeName="height" values="14;8;14" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+        <animate attributeName="y" values="-4;2;-4" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+      </rect>
+      <rect x="6" y="-1" width="5" height="11" rx="1" fill="#c4b5fd" opacity="0.8">
+        <animate attributeName="height" values="11;16;11" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+        <animate attributeName="y" values="-1;-6;-1" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+      </rect>
+    </g>
+    <text x="50" y="32" font-family="'Segoe UI', sans-serif" font-size="13" fill="#f1f5f9" font-weight="700">CISO Dashboard</text>
+    <text x="50" y="48" font-family="'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">Threat intel and risk analytics</text>
+    <!-- Mini metrics -->
+    <text x="15" y="72" font-family="'SF Mono', monospace" font-size="10" fill="#8b5cf6">2,847</text>
+    <text x="60" y="72" font-family="'SF Mono', monospace" font-size="9" fill="#64748b">threats blocked</text>
+    <text x="15" y="88" font-family="'SF Mono', monospace" font-size="10" fill="#a78bfa">99.7%</text>
+    <text x="60" y="88" font-family="'SF Mono', monospace" font-size="9" fill="#64748b">detection rate</text>
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="8 12" opacity="0.3">
+      <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </rect>
+  </g>
+
+  <!-- Feature 4: Merkle Audit -->
+  <g transform="translate(30, 185)">
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1" opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </rect>
+    <!-- Hash chain icon -->
+    <g transform="translate(25, 28)">
+      <rect x="-10" y="-6" width="8" height="8" rx="1" fill="none" stroke="#f59e0b" stroke-width="1.2"/>
+      <line x1="-2" y1="-2" x2="2" y2="-2" stroke="#f59e0b" stroke-width="1"/>
+      <rect x="2" y="-6" width="8" height="8" rx="1" fill="none" stroke="#f59e0b" stroke-width="1.2"/>
+      <rect x="-4" y="5" width="8" height="8" rx="1" fill="none" stroke="#f59e0b" stroke-width="1.2">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <text x="50" y="30" font-family="'Segoe UI', sans-serif" font-size="13" fill="#f1f5f9" font-weight="700">Merkle-Proof Audit</text>
+    <text x="50" y="46" font-family="'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">Tamper-evident cryptographic logs</text>
+    <text x="15" y="72" font-family="'SF Mono', monospace" font-size="9" fill="#f59e0b">SHA-256</text>
+    <text x="70" y="72" font-family="'SF Mono', monospace" font-size="9" fill="#64748b">hash chain verified</text>
+    <text x="15" y="88" font-family="'SF Mono', monospace" font-size="9" fill="#f59e0b">ROOT:</text>
+    <text x="55" y="88" font-family="'SF Mono', monospace" font-size="9" fill="#64748b">a4f2c...8e91</text>
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="8 12" opacity="0.3">
+      <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </rect>
+  </g>
+
+  <!-- Feature 5: Compliance -->
+  <g transform="translate(320, 185)">
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="#0f172a" stroke="#ec4899" stroke-width="1" opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" begin="2s"/>
+    </rect>
+    <!-- Checkmark shield -->
+    <g transform="translate(25, 28)">
+      <path d="M 0 -12 L 9 -7 L 9 2 Q 9 10 0 14 Q -9 10 -9 2 L -9 -7 Z" fill="none" stroke="#ec4899" stroke-width="1.2"/>
+      <path d="M -4 1 L -1 4 L 5 -3" stroke="#ec4899" stroke-width="1.5" fill="none">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <text x="50" y="30" font-family="'Segoe UI', sans-serif" font-size="13" fill="#f1f5f9" font-weight="700">Compliance Suite</text>
+    <text x="50" y="46" font-family="'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">SOC2, GDPR, HIPAA, ISO 27001</text>
+    <!-- Compliance items with animated checks -->
+    <text x="15" y="70" font-family="'SF Mono', monospace" font-size="9" fill="#10b981">✓</text>
+    <text x="28" y="70" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">SOC 2 Type II</text>
+    <text x="120" y="70" font-family="'SF Mono', monospace" font-size="9" fill="#10b981">✓</text>
+    <text x="133" y="70" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">GDPR</text>
+    <text x="15" y="88" font-family="'SF Mono', monospace" font-size="9" fill="#10b981">✓</text>
+    <text x="28" y="88" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">HIPAA</text>
+    <text x="120" y="88" font-family="'SF Mono', monospace" font-size="9" fill="#10b981">✓</text>
+    <text x="133" y="88" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">PCI-DSS</text>
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="none" stroke="#ec4899" stroke-width="2" stroke-dasharray="8 12" opacity="0.3">
+      <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite" begin="2s"/>
+    </rect>
+  </g>
+
+  <!-- Feature 6: MDM Deployment -->
+  <g transform="translate(610, 185)">
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="#0f172a" stroke="#14b8a6" stroke-width="1" opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" begin="2.5s"/>
+    </rect>
+    <!-- Deploy icon -->
+    <g transform="translate(25, 28)">
+      <rect x="-9" y="-6" width="18" height="14" rx="2" fill="none" stroke="#14b8a6" stroke-width="1.2"/>
+      <line x1="0" y1="-6" x2="0" y2="-12" stroke="#14b8a6" stroke-width="1.2"/>
+      <polygon points="-4,-12 0,-16 4,-12" fill="#14b8a6">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    <text x="50" y="30" font-family="'Segoe UI', sans-serif" font-size="13" fill="#f1f5f9" font-weight="700">MDM Deployment</text>
+    <text x="50" y="46" font-family="'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">Zero-touch enterprise rollout</text>
+    <text x="15" y="70" font-family="'SF Mono', monospace" font-size="9" fill="#14b8a6">▸</text>
+    <text x="28" y="70" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">Intune / Jamf Pro</text>
+    <text x="15" y="84" font-family="'SF Mono', monospace" font-size="9" fill="#14b8a6">▸</text>
+    <text x="28" y="84" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">GPO / PAC Proxy</text>
+    <text x="15" y="98" font-family="'SF Mono', monospace" font-size="9" fill="#14b8a6">▸</text>
+    <text x="28" y="98" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">Docker / Compose</text>
+    <rect x="0" y="0" width="260" height="110" rx="10" fill="none" stroke="#14b8a6" stroke-width="2" stroke-dasharray="8 12" opacity="0.3">
+      <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite" begin="2.5s"/>
+    </rect>
+  </g>
+</svg>

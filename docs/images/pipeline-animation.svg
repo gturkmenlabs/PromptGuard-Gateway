@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <pattern id="grid2" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.3" opacity="0.4"/>
+    </pattern>
+    <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="33%" stop-color="#f59e0b"/>
+      <stop offset="66%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="200" fill="url(#bg2)"/>
+  <rect width="900" height="200" fill="url(#grid2)"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#64748b" font-weight="600" letter-spacing="3">HOW IT WORKS</text>
+
+  <!-- Pipeline boxes -->
+  <!-- Step 1: Raw Prompt -->
+  <g transform="translate(70, 60)">
+    <rect x="0" y="0" width="160" height="100" rx="8" fill="#0f172a" stroke="#ef4444" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="80" y="25" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#ef4444" font-weight="700">⚠ RAW PROMPT</text>
+    <line x1="15" y1="35" x2="145" y2="35" stroke="#1e293b" stroke-width="0.5"/>
+    <text x="80" y="52" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">My API key is</text>
+    <text x="80" y="66" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#ef4444" font-weight="600">sk-live-4eC39Hq...</text>
+    <text x="80" y="80" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">Email: john@co.io</text>
+    <!-- Danger pulse -->
+    <circle cx="150" cy="10" r="5" fill="#ef4444" opacity="0.8">
+      <animate attributeName="r" values="4;7;4" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(240, 100)">
+    <line x1="0" y1="0" x2="45" y2="0" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 3">
+      <animate attributeName="stroke-dashoffset" values="0;-14" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <polygon points="45,-5 55,0 45,5" fill="#f59e0b">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+
+  <!-- Step 2: DLP Engine -->
+  <g transform="translate(305, 60)">
+    <rect x="0" y="0" width="160" height="100" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+    <text x="80" y="25" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#f59e0b" font-weight="700">🔍 DLP ENGINE</text>
+    <line x1="15" y1="35" x2="145" y2="35" stroke="#1e293b" stroke-width="0.5"/>
+    <text x="80" y="52" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">Scanning entities...</text>
+    <text x="80" y="66" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#f59e0b">3 threats found</text>
+    <text x="80" y="80" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">Applying policies</text>
+    <!-- Scanning animation -->
+    <rect x="15" y="90" width="0" height="3" rx="1" fill="#f59e0b" opacity="0.7">
+      <animate attributeName="width" values="0;130;0" dur="2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(475, 100)">
+    <line x1="0" y1="0" x2="45" y2="0" stroke="#10b981" stroke-width="2" stroke-dasharray="4 3">
+      <animate attributeName="stroke-dashoffset" values="0;-14" dur="1s" repeatCount="indefinite" begin="0.3s"/>
+    </line>
+    <polygon points="45,-5 55,0 45,5" fill="#10b981">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1s" repeatCount="indefinite" begin="0.3s"/>
+    </polygon>
+  </g>
+
+  <!-- Step 3: Sanitized -->
+  <g transform="translate(540, 60)">
+    <rect x="0" y="0" width="160" height="100" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </rect>
+    <text x="80" y="25" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#10b981" font-weight="700">✓ SANITIZED</text>
+    <line x1="15" y1="35" x2="145" y2="35" stroke="#1e293b" stroke-width="0.5"/>
+    <text x="80" y="52" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">My API key is</text>
+    <text x="80" y="66" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#10b981" font-weight="600">[API_TOKEN_4912]</text>
+    <text x="80" y="80" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">Email: [SYN_EMAIL]</text>
+    <!-- Safe check -->
+    <circle cx="150" cy="10" r="5" fill="#10b981" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Arrow 3 -->
+  <g transform="translate(710, 100)">
+    <line x1="0" y1="0" x2="45" y2="0" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4 3">
+      <animate attributeName="stroke-dashoffset" values="0;-14" dur="1s" repeatCount="indefinite" begin="0.6s"/>
+    </line>
+    <polygon points="45,-5 55,0 45,5" fill="#06b6d4">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1s" repeatCount="indefinite" begin="0.6s"/>
+    </polygon>
+  </g>
+
+  <!-- Step 4: LLM -->
+  <g transform="translate(765, 60)">
+    <rect x="0" y="0" width="110" height="100" rx="8" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </rect>
+    <text x="55" y="25" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#06b6d4" font-weight="700">🤖 LLM</text>
+    <line x1="10" y1="35" x2="100" y2="35" stroke="#1e293b" stroke-width="0.5"/>
+    <text x="55" y="55" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">ChatGPT</text>
+    <text x="55" y="69" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">Claude</text>
+    <text x="55" y="83" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8">Gemini</text>
+  </g>
+
+  <!-- Bottom info bar -->
+  <text x="450" y="190" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#475569" letter-spacing="1">
+    REAL-TIME INTERCEPTION  •  ZERO LATENCY  •  ZERO KNOWLEDGE
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+  </text>
+</svg>

@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" fill="none">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <!-- Emerald glow -->
+    <linearGradient id="emeraldGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Cyan glow -->
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Shield gradient -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glowStrong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="300" fill="url(#bg)"/>
+  <rect width="900" height="300" fill="url(#grid)" opacity="0.4"/>
+
+  <!-- Animated scan line -->
+  <rect x="0" y="0" width="900" height="2" fill="url(#emeraldGlow)" opacity="0.6">
+    <animate attributeName="y" values="0;300;0" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Animated horizontal cyber lines -->
+  <line x1="0" y1="60" x2="200" y2="60" stroke="#10b981" stroke-width="1" opacity="0.3">
+    <animate attributeName="x2" values="0;200;0" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.3;0" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <line x1="700" y1="240" x2="900" y2="240" stroke="#06b6d4" stroke-width="1" opacity="0.3">
+    <animate attributeName="x1" values="900;700;900" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.3;0" dur="3.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Corner decorations -->
+  <!-- Top-left corner -->
+  <path d="M 20 30 L 20 15 L 35 15" stroke="#10b981" stroke-width="2" fill="none" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <!-- Top-right corner -->
+  <path d="M 880 30 L 880 15 L 865 15" stroke="#10b981" stroke-width="2" fill="none" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+  </path>
+  <!-- Bottom-left corner -->
+  <path d="M 20 270 L 20 285 L 35 285" stroke="#06b6d4" stroke-width="2" fill="none" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite" begin="1s"/>
+  </path>
+  <!-- Bottom-right corner -->
+  <path d="M 880 270 L 880 285 L 865 285" stroke="#06b6d4" stroke-width="2" fill="none" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+  </path>
+
+  <!-- Shield Icon with pulse -->
+  <g transform="translate(450, 90)" filter="url(#glowStrong)">
+    <!-- Outer pulse ring -->
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#10b981" stroke-width="1" opacity="0">
+      <animate attributeName="r" values="40;60;40" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#10b981" stroke-width="1" opacity="0">
+      <animate attributeName="r" values="35;55;35" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+      <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+    <!-- Shield shape -->
+    <path d="M 0 -30 L 22 -18 L 22 5 Q 22 25 0 35 Q -22 25 -22 5 L -22 -18 Z" 
+          fill="url(#shieldGrad)" opacity="0.9" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- Lock icon inside shield -->
+    <rect x="-7" y="-8" width="14" height="12" rx="2" fill="#020617" opacity="0.8"/>
+    <path d="M -4 -8 L -4 -14 Q -4 -20 0 -20 Q 4 -20 4 -14 L 4 -8" 
+          stroke="#020617" stroke-width="2.5" fill="none" opacity="0.8"/>
+    <circle cx="0" cy="-1" r="2" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Title Text -->
+  <text x="450" y="165" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="700" fill="#f1f5f9" letter-spacing="2">
+    PromptGuard Gateway
+  </text>
+
+  <!-- Subtitle with typing effect simulation -->
+  <text x="450" y="195" text-anchor="middle" font-family="'SF Mono', 'Fira Code', 'Consolas', monospace" font-size="13" fill="#10b981" letter-spacing="1" opacity="0.9">
+    Enterprise Zero-Knowledge DLP for Generative AI
+    <animate attributeName="opacity" values="0.9;0.6;0.9" dur="3s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Status indicators -->
+  <!-- Left status -->
+  <g transform="translate(180, 240)">
+    <circle cx="0" cy="0" r="4" fill="#10b981">
+      <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="12" y="4" font-family="'SF Mono', 'Fira Code', monospace" font-size="11" fill="#94a3b8" letter-spacing="0.5">SHA-256 MERKLE AUDIT</text>
+  </g>
+  <!-- Center status -->
+  <g transform="translate(400, 240)">
+    <circle cx="0" cy="0" r="4" fill="#06b6d4">
+      <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+      <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+    </circle>
+    <text x="12" y="4" font-family="'SF Mono', 'Fira Code', monospace" font-size="11" fill="#94a3b8" letter-spacing="0.5">ZERO-KNOWLEDGE</text>
+  </g>
+  <!-- Right status -->
+  <g transform="translate(610, 240)">
+    <circle cx="0" cy="0" r="4" fill="#f59e0b">
+      <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" begin="1.4s"/>
+      <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite" begin="1.4s"/>
+    </circle>
+    <text x="12" y="4" font-family="'SF Mono', 'Fira Code', monospace" font-size="11" fill="#94a3b8" letter-spacing="0.5">REAL-TIME DLP</text>
+  </g>
+
+  <!-- Animated data particles -->
+  <circle cx="0" cy="150" r="1.5" fill="#10b981" opacity="0.7">
+    <animate attributeName="cx" values="0;900" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.7;0" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="0" cy="100" r="1" fill="#06b6d4" opacity="0.5">
+    <animate attributeName="cx" values="0;900" dur="6s" repeatCount="indefinite" begin="2s"/>
+    <animate attributeName="opacity" values="0;0.5;0" dur="6s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+  <circle cx="900" cy="200" r="1.5" fill="#f59e0b" opacity="0.5">
+    <animate attributeName="cx" values="900;0" dur="7s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="opacity" values="0;0.5;0" dur="7s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <circle cx="900" cy="80" r="1" fill="#10b981" opacity="0.4">
+    <animate attributeName="cx" values="900;0" dur="9s" repeatCount="indefinite" begin="3s"/>
+    <animate attributeName="opacity" values="0;0.4;0" dur="9s" repeatCount="indefinite" begin="3s"/>
+  </circle>
+
+  <!-- Bottom border glow -->
+  <rect x="100" y="295" width="700" height="2" fill="url(#emeraldGlow)" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+  </rect>
+</svg>
